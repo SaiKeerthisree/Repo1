@@ -1,0 +1,14 @@
+def palindrome(n):
+  rev=0
+  temp=n
+  l=len(str(n))
+  mul=str(1)+"0"*(l-1)
+  mul=int(mul)
+  while(n>0):
+    rem=n%10
+    rev+=rem*mul
+    mul//=10 
+    n//=10  
+  print(rev)
+n=int(input())
+palindrome(n)
